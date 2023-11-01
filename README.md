@@ -15,11 +15,11 @@ _WHEN_ I provide time zone data (eg. abbreviation: EST, CST or hour: -1, +1 or m
 *THEN* I get the current time in that time zone<br>
 _WHEN_ I provide time zone data and a time (eg 10:44:15 AM)<br>
 *THEN* I get that time stamp converted into what it would be in that time zone<br>
-_WHEN_ I call the time addition/subtraction function(s) and give it a time stamp (h:m:s: or s) along with another time stamp (h:m:s: or s) <br>
+_WHEN_ I call the time addition/subtraction function(s) and give it a time stamp (h\:m\:s: or s) along with another time stamp (h\:m\:s: or s) <br>
 *THEN* I get the calculated time stamp <br>
 _WHEN_ I call the time convert function for a 12 with meridian time stamp <br>
 *THEN* I get the time stamp in 24 hour time format <br>
-_WHEN_ I call the time format function ( h:m:s | h:m:s tt | h:m | m | s ) with a time stamp ( h:m:s | h:m:s tt | h:m | m | s ) <br>
+_WHEN_ I call the time format function ( h\:m\:s | h\:m\:s tt | h:m | m | s ) with a time stamp ( h\:m\:s | h\:m\:s tt | h:m | m | s ) <br>
 *THEN* I get that time stamp converted into the format that was provided <br>
 
 ## Docs
