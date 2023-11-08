@@ -82,5 +82,5 @@ __THEN__ I get that time stamp converted into the format that was provided <br>
 
 ## Authors
 
-Stephen Merki
-Nicholas Kuepper
+Stephen Merki<br>
+Nicholas Kuepper<br>
