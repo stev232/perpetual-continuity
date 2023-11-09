@@ -14,21 +14,40 @@ timeLookup();
 /* TODO
 
     Fulfill business needs with functions:
-    - Time Zone input --> Current time
-    - Time Zone and timestamp input --> Converted time
-    - Time addition/subtraction
-    - Time cycle converter (12hr --> 24hr)
-    - Timestamp formatter
+    - timeLookup = Time Zone input --> Current time
+    - timeConvert = Time Zone and timestamp input --> Converted time
+    - timeDifference = Time addition/subtraction
+    - cycleConvert = Time cycle converter (12hr --> 24hr)
+    - timeFormat = Timestamp formatter
+
+    Receive inputs and sanitize
 
 */
 
+// Receives tZone String returns the current time in that zone.
 function timeLookup(tZone) {
-    // Receives tZone String and looks up the current time in that zone.
-    // Sanitize input
-
-    // Declarations
-    const date = new Date();
-
+    // Declaration for date
     // Default Date object provides the current date in local (system runtime) locale
-    console.log(new Intl.DateTimeFormat('en-US').format(date));
+    const date = new Date();
+    console.log(new Intl.DateTimeFormat('en-US').format(date)); // We will be using this a lot
+}
+
+// Receives tZone String and time (eg 10:44:15 AM), returns converted timestamp.
+function timeConvert(tZone, time) {
+
+}
+
+// Receives two time arguments and calculates the difference.
+function timeDifference(t1, t2) {
+
+}
+
+// Receives time input with 12 hr cycle and converts to 24 hr.
+function cycleConvert(time) {
+
+}
+
+// Receives a format and time and returns the time in that format.
+function timeFormat(format, time) {
+
 }
