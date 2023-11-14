@@ -1,6 +1,5 @@
 // *Dramatic music*
 console.log("Hello World!");
-timeLookup();
 
 /*  NOTES
 
@@ -14,17 +13,17 @@ timeLookup();
 /* TODO
 
     Fulfill business needs with functions:
-    - timeLookup = Time Zone input --> Current time
-    - timeConvert = Time Zone and timestamp input --> Converted time
+    - timeLookup = Time Zone input (as string or number) --> Current time
+    - timeConvert = Time Zone (as string or number) and timestamp input --> Converted time
     - timeDifference = Time addition/subtraction
-    - cycleConvert = Time cycle converter (12hr --> 24hr)
+    - cycleConvert = Time cycle converter (12hr --> 24hr) || (24hr --> 12hr )
     - timeFormat = Timestamp formatter
 
     Receive inputs and sanitize
 
 */
 
-// Receives tZone String returns the current time in that zone.
+// Receives tZone String or Number then returns the current time in that time zone.
 function timeLookup(tZone) {
     // Declaration for date
     // Default Date object provides the current date in local (system runtime) locale
@@ -32,17 +31,22 @@ function timeLookup(tZone) {
     console.log(new Intl.DateTimeFormat('en-US').format(date)); // We will be using this a lot
 }
 
-// Receives tZone String and time (eg 10:44:15 AM), returns converted timestamp.
+// Receives tZone String/Number and time (eg 10:44:15 AM), returns converted timestamp.
 function timeConvert(tZone, time) {
 
 }
 
 // Receives two time arguments and calculates the difference.
-function timeDifference(t1, t2) {
-
+const timeCompare = {
+    timeDifference: function(t1, t2) {
+        console.log(t1-t2);
+    },
+    timeSum: function(t1, t2) {
+        console.log(t1+t2);
+    }
 }
 
-// Receives time input with 12 hr cycle and converts to 24 hr.
+// Receives time input of either 12 or 24 hour and converts it to the opposite format.
 function cycleConvert(time) {
 
 }
@@ -51,3 +55,7 @@ function cycleConvert(time) {
 function timeFormat(format, time) {
 
 }
+
+timeLookup();
+timeCompare.timeDifference(9, 6);
+timeCompare.timeSum(4, 9);
